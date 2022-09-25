@@ -5,6 +5,8 @@ import FeedbackList from "./components/FeedbackList";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import { v4 as uuidv4 } from "uuid";
+import { BrowserRouter } from "react-router-dom";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -28,6 +30,7 @@ function App() {
           handleDelete={deleteFeedback}
           feedback={feedback}
         ></FeedbackList>
+        <AboutPage></AboutPage>
       </div>
     </>
   );
